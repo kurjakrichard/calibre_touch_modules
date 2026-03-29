@@ -1,8 +1,8 @@
-import 'package:flutibre_light/screens/home_screen.dart';
-import 'package:flutibre_light/widgets/theme.dart';
+import 'package:flutibre_light/modul_4_riverpod/screens/home_screen.dart';
+import 'package:flutibre_light/modul_4_riverpod/widgets/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'screens/edit_screen.dart';
+import 'modul_4_riverpod/screens/edit_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

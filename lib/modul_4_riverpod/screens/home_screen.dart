@@ -1,6 +1,6 @@
 import 'package:file_picker/file_picker.dart';
-import 'package:flutibre_light/providers/book_provider.dart';
-import 'package:flutibre_light/service/file_service.dart';
+import 'package:flutibre_light/modul_4_riverpod/providers/book_provider.dart';
+import 'package:flutibre_light/modul_4_riverpod/service/file_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:remove_diacritic/remove_diacritic.dart';

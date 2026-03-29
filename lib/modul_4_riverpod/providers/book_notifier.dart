@@ -1,4 +1,4 @@
-import 'package:flutibre_light/providers/book_state.dart';
+import 'package:flutibre_light/modul_4_riverpod/providers/book_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../model/book.dart';
 import '../repository/database_handler.dart';
