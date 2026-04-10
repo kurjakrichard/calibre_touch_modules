@@ -1,19 +1,19 @@
-import 'package:flutibre_light/modul_4_riverpod/providers/book_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:remove_diacritic/remove_diacritic.dart';
 import '../model/book.dart';
+import '../providers/book_provider.dart';
 
-class EditScreen extends StatefulWidget {
-  const EditScreen({super.key, required this.title, required this.buttonText});
+class EditPage extends StatefulWidget {
+  const EditPage({super.key, required this.title, required this.buttonText});
   final String title;
   final String buttonText;
 
   @override
-  State<EditScreen> createState() => _EditScreenState();
+  State<EditPage> createState() => _EditPageState();
 }
 
-class _EditScreenState extends State<EditScreen> {
+class _EditPageState extends State<EditPage> {
   Book? selectedItem;
   final TextEditingController _titleController = TextEditingController();
   // ignore: non_constant_identifier_names

@@ -1,20 +1,20 @@
 import 'package:file_picker/file_picker.dart';
-import 'package:flutibre_light/modul_4_riverpod/providers/book_provider.dart';
-import 'package:flutibre_light/modul_4_riverpod/service/file_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:remove_diacritic/remove_diacritic.dart';
 import '../model/book.dart';
+import '../providers/book_provider.dart';
 import '../repository/database_handler.dart';
+import '../service/file_service.dart';
 
-class HomeScreen extends ConsumerStatefulWidget {
-  const HomeScreen({super.key});
+class RiverpodPage extends ConsumerStatefulWidget {
+  const RiverpodPage({super.key});
 
   @override
-  ConsumerState<HomeScreen> createState() => _HomeScreenState();
+  ConsumerState<RiverpodPage> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends ConsumerState<HomeScreen> {
+class _HomeScreenState extends ConsumerState<RiverpodPage> {
   Book? selectedBook;
   PlatformFile? _pickedfile;
   // ignore: unused_field

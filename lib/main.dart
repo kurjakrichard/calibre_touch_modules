@@ -1,35 +1,25 @@
-import 'package:flutibre_light/modul_4_riverpod/screens/home_screen.dart';
-import 'package:flutibre_light/modul_4_riverpod/widgets/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'modul_4_riverpod/screens/edit_screen.dart';
+import '../modul_4_riverpod/widgets/theme.dart';
+import '../modul_6_gorouter/myapp_router.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const ProviderScope(child: Flutibre()));
+  runApp(const ProviderScope(child: CalibreTouchModules()));
 }
 
-class Flutibre extends StatelessWidget {
-  const Flutibre({super.key});
+class CalibreTouchModules extends StatelessWidget {
+  const CalibreTouchModules({super.key});
+
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: baseTheme,
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const HomeScreen(),
-        '/addpage': (context) => const EditScreen(
-              title: 'Add Item',
-              buttonText: 'Insert',
-            ),
-        '/editpage': (context) => const EditScreen(
-              title: 'Edit Item',
-              buttonText: 'Update',
-            )
-      },
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'Flutibre',
+      theme: baseTheme,
+      title: 'Calibre Touch modules',
+      routerConfig: MyappRouter().router,
+   
     );
   }
 }

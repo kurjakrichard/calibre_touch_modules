@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../utils/constants.dart';
+import '../utils/enums.dart';
 
 class FirstRun extends StatefulWidget {
   const FirstRun({super.key});
@@ -132,8 +134,12 @@ class FirstRunState extends State<FirstRun> {
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16),
             ),
+            
           ]),
         ),
+        ElevatedButton(
+                onPressed: () => context.goNamed(Routes.home.name),
+                child: const Text('HomePage'),),
       ],
     );
   }
