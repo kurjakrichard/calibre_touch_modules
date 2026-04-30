@@ -4,14 +4,14 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../utils/constants.dart';
 import '../utils/enums.dart';
 
-class FirstRun extends StatefulWidget {
-  const FirstRun({super.key});
+class OnboardingPage extends StatefulWidget {
+  const OnboardingPage({super.key});
 
   @override
-  FirstRunState createState() => FirstRunState();
+  OnboardingPageState createState() => OnboardingPageState();
 }
 
-class FirstRunState extends State<FirstRun> {
+class OnboardingPageState extends State<OnboardingPage> {
   int currentPage = 0;
   final _pageController = PageController(initialPage: 0);
 
@@ -97,12 +97,10 @@ class FirstRunState extends State<FirstRun> {
       children: [
         Container(
           color: const Color.fromRGBO(28, 47, 67, 1),
-          child: Center(
-            child: Image.asset(
-              'assets/logo.png',
-              fit: BoxFit.fitHeight,
-              height: 300,
-            ),
+          child: Image.asset(
+            'assets/logo.png',
+            fit: BoxFit.fitHeight,
+            height: 300,
           ),
         ),
         Container(
@@ -149,12 +147,10 @@ class FirstRunState extends State<FirstRun> {
       children: [
         Container(
           color: const Color.fromRGBO(28, 47, 67, 1),
-          child: Center(
-            child: Image.asset(
-              'assets/logo.png',
-              fit: BoxFit.fitHeight,
-              height: 300,
-            ),
+          child: Image.asset(
+            'assets/logo.png',
+            fit: BoxFit.fitHeight,
+            height: 300,
           ),
         ),
         Container(
@@ -187,12 +183,10 @@ class FirstRunState extends State<FirstRun> {
       children: [
         Container(
           color: const Color.fromRGBO(28, 47, 67, 1),
-          child: Center(
-            child: Image.asset(
-              'assets/logo.png',
-              fit: BoxFit.fitHeight,
-              height: 300,
-            ),
+          child: Image.asset(
+            'assets/logo.png',
+            fit: BoxFit.fitHeight,
+            height: 300,
           ),
         ),
         Container(

@@ -21,7 +21,7 @@ class SplashPageState extends State<SplashPage> {
   }
 
   void changeScreen() {
-  context.goNamed(Routes.home.name);
+  context.go(RouteLocation.home.name);
   }
 
   @override
@@ -43,6 +43,11 @@ class SplashPageState extends State<SplashPage> {
               'assets/logo.png',
               height: 400.0,
               width: 400.0,
+            ),
+            const Text(
+              'Welcome to Calibre Touch',
+              style: TextStyle(fontSize: 18, color: Colors.white),
+              textAlign: TextAlign.center,
             ),
           ],
         ),

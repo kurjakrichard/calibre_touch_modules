@@ -2,7 +2,7 @@ import 'package:calibre_touch_modules/modul_1_splash/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../app/home_page.dart';
-import '../modul_2_first_run/first_run.dart';
+import '../modul_2_onboarding_page/onboarding_page.dart';
 import '../modul_4_riverpod/pages/riverpod_screen.dart';
 import '../utils/enums.dart';
 import 'error_page.dart';
@@ -29,7 +29,7 @@ class MyappRouter {
             name: Routes.firstrun.name,
             path: RouteLocation.firstrun.name,
             pageBuilder: (context, state) =>
-                const MaterialPage(child: FirstRun()),
+                const MaterialPage(child: OnboardingPage()),
           ),
           GoRoute(
             name: Routes.riverpod.name,
