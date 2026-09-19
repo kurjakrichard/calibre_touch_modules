@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../modul_4_riverpod/widgets/theme.dart';
 import '../modul_6_gorouter/myapp_router.dart';
-
+late SharedPreferences prefs;
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const ProviderScope(child: CalibreTouchModules()));

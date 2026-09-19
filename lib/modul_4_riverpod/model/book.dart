@@ -11,7 +11,6 @@ class Book extends Equatable {
   Book({this.id, this.title = '', this.author_sort = '', this.path = ''});
 
   //Convert a Map object to a model object
-  @override
   Book.fromMap(Map<String, dynamic> res)
       : id = res['id'],
         title = res['title'],

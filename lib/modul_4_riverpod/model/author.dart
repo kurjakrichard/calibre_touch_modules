@@ -9,7 +9,6 @@ class Author extends Equatable {
   Author({this.id, required this.name, this.sort = ''});
 
   //Convert a Map object to a model object
-  @override
   Author.fromMap(Map<String, dynamic> res)
       : id = res['id'],
         name = res['name'],

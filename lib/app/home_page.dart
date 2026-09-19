@@ -20,11 +20,11 @@ class HomePage extends StatelessWidget {
           children: [
             ElevatedButton(
                 //test purpose with path
-                onPressed: () => context.push(RouteLocation.splash.name),
+                onPressed: () => context.push(Routes.splash.path),
                 child: const Text('1 Splash')),
             ElevatedButton(
                 //test purpose with path
-                onPressed: () => context.go(RouteLocation.firstrun.name),
+                onPressed: () => context.go(Routes.firstrun.path),
                 child: const Text('2 First run')),
             ElevatedButton(
                 onPressed: () =>

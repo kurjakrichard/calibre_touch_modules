@@ -21,8 +21,9 @@ class SplashPageState extends State<SplashPage> {
   }
 
   void changeScreen() {
-  context.go(RouteLocation.home.name);
+    context.pushReplacement(Routes.home.name);
   }
+
 
   @override
   void initState() {

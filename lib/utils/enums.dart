@@ -20,26 +20,21 @@ enum Bookkeys {
   final String name;
 }
 //* enum for gorouter names
-enum Routes {
-  home,
-  splash,
-  firstrun,
-  riverpod,
-  gorouter;
-}
-//* enum for gorouter paths
-enum RouteLocation {
-  home(name: '/'),
-  splash(name: '/splash'),
-  firstrun(name: '/firstrun'),
-  riverpod(name: 'riverpodpage'),
-  gorouter(name: 'gorouter/:name');
 
-  const RouteLocation({
-    required this.name,
+//* enum for gorouter paths
+enum Routes {
+  home(name: '/', path: '/'),
+  splash(name: 'splash', path: '/splash'),
+  firstrun(name: 'firstrun', path: '/firstrun'),
+  riverpod(name:  'riverpodpage', path: '/riverpod'),
+  gorouter(name: 'gorouter/:name', path: '/gorouter/:name');
+
+  const Routes({
+    required this.name, required this.path,
   });
 
   final String name;
+  final String path;
 }
 
 

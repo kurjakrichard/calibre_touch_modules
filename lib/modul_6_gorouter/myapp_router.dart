@@ -10,43 +10,52 @@ import 'gorouter_page.dart';
 
 class MyappRouter {
   GoRouter router = GoRouter(
-    initialLocation: RouteLocation.home.name,
+    initialLocation: Routes.splash.path,
     routes: [
       GoRoute(
+        name: Routes.splash.name,
+        path: Routes.splash.path,
+        //only test purpose wiht pageBuilder
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: SplashPage()),
+      ),
+      GoRoute(
+        name: Routes.firstrun.name,
+        path: Routes.firstrun.path,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: OnboardingPage()),
+      ),
+      GoRoute(
         name: Routes.home.name,
-        path: RouteLocation.home.name,
+        path: Routes.home.path,
         //build a page by builder
         builder: HomePage.builder,
         routes: [
           GoRoute(
-            name: Routes.splash.name,
-            path: RouteLocation.splash.name,
-            //only test purpose wiht pageBuilder
-            pageBuilder: (context, state) =>
-                const MaterialPage(child: SplashPage()),
-          ),
-          GoRoute(
-            name: Routes.firstrun.name,
-            path: RouteLocation.firstrun.name,
-            pageBuilder: (context, state) =>
-                const MaterialPage(child: OnboardingPage()),
-          ),
-          GoRoute(
             name: Routes.riverpod.name,
-            path: RouteLocation.riverpod.name,
+            path: Routes.riverpod.path,
             //only test purposes with builder and build a page here
             builder: (context, state) => const RiverpodPage(),
           ),
           GoRoute(
             name: Routes.gorouter.name,
-            path: RouteLocation.gorouter.name,
-            builder: (context, state) =>  GorouterPage(
-              gorouter: 'gorouter', name: state.pathParameters['name']!, 
+            path: Routes.gorouter.path,
+            builder: (context, state) => GorouterPage(
+              gorouter: 'gorouter',
+              name: state.pathParameters['name']!,
             ),
           ),
         ],
       ),
     ],
-    errorBuilder: (context, state) =>  ErrorPage(error: state.error),
+    redirect: (context, state) {
+      // Example of a redirect based on authentication status
+      // final isLoggedIn = checkIfUserIsLoggedIn();
+      // if (!isLoggedIn && state.subloc != RouteLocation.firstrun.name) {
+      //   return RouteLocation.firstrun.name;
+      // }
+      return null; // No redirection
+    },
+    errorBuilder: (context, state) => ErrorPage(error: state.error),
   );
 }
